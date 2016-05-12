@@ -1,5 +1,5 @@
-var gulp = require('gulp'); 
-
+var gulp = require('gulp');
+var concat = require('gulp-concat')
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
@@ -24,14 +24,20 @@ gulp.task('img', function () {
 		.pipe(imagemin({
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
-			use: [imageminMozjpeg({quality: 75})]
+			use: [imageminMozjpeg({quality: 80})]
 		}))
 		.pipe(gulp.dest('./public/images/banner/min'));
+});
+
+gulp.task('scripts', function() {
+  return gulp.src(['./public/js/min/observer.js', './lib/app.js'])
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./public/js/min/'));
 });
 
 gulp.watch('./public/js/*.js', function() {
 	gulp.run('default');
 });
 
-gulp.task('default', ['js', 'css'], function() {
-});
+gulp.task('default', ['js', 'css', 'scripts'], function() {
+});	
