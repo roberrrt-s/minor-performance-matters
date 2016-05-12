@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel='stylesheet' href='/styles/min/style.css' />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="header__nav">
+                <section class="header__logo">
+                    <img class="header__logo__img" src="/images/logo.png">
+                </section>
+                <ul class="header__nav-list">
+                    <li class="header__nav-list__item"><a class="header__nav-list__item__link" href="/#home"><img class="header__nav-list__item__link__img" src="/icons/png/home.png">Home</a></li>
+                    <li class="header__nav-list__item"><a class="header__nav-list__item__link" href="https://looklive.com/discover/"><img class="header__nav-list__item__link__img" src="/icons/png/latest.png">Latest</a></li>
+                    <li class="header__nav-list__item"><a class="header__nav-list__item__link" href="https://looklive.com/people/"><img class="header__nav-list__item__link__img" src="/icons/png/people.png">People</a></li>
+                    <li class="header__nav-list__item"><a class="header__nav-list__item__link" href="https://looklive.com/shows/"><img class="header__nav-list__item__link__img" src="/icons/png/shows.png">Shows</a></li>
+                    <li class="header__nav-list__item"><a class="header__nav-list__item__link" href="https://looklive.com/music/"><img class="header__nav-list__item__link__img" src="/icons/png/music.png">Music</a></li>
+                    <li class="header__nav-list__item"><a class="header__nav-list__item__link" href="https://looklive.com/brands/"><img class="header__nav-list__item__link__img" src="/icons/png/brands.png">Brands</a></li>
+                </ul>
+            </nav>
+            <picture class="header__banner">
+                <source srcset="/images/banner/header_1600.jpg" media="(min-width: 1600px)">
+                <source srcset="/images/banner/header_1280.jpg" media="(min-width: 1280px)">
+                <source srcset="/images/banner/header_1024.jpg" media="(min-width: 1024px)">
+                <source srcset="/images/banner/header_620.jpg" media="(min-width: 620px)">
+                <source srcset="/images/banner/header_320.jpg" media="(min-width: 320px)">
+                <img class="header__banner__img" src="/images/banner/header.png" alt="header">
+            </picture>
+        </header>
+        
+        <main class="main">
+            {{{body}}}
+        </main>
+
+        <script src="/js/min/observer.js"></script>
+        <script src="/js/min/app.js"></script>
+<!--        <script src="/js/min/sw-register.js"></script> -->
+
+    </body>
+</html>

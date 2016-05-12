@@ -1,0 +1,46 @@
+<section class="main__appearance" data-id="{{ item.id }}">
+    <figure class="main__appearance__img">
+        <img class="main__appearance__img__img" src="{{ item.image.url }}">
+        {{#each item.product_occurrences}}
+            <div class="main__appearance__img__product-indicator" style="top: {{position.y}}%; left: {{position.x}}%;" data-uuid="{{product.id}}"></div>
+        {{/each}}
+    </figure>
+    <section class="main__appearance__info">
+        <h2 class="main__appearance__info__h2">
+            <img class="main__appearance__info__h2__avatar" src="{{ item.subject.avatar.url }}"> {{ item.subject.name }}
+        </h2>
+        <h1>{{ item.title }}</h1>
+
+        <section class="main__appearance__info__products">
+            <h1 class="main__appearance__info__products__h1">Products</h1>
+            <section class="main__appearance__info__products__inner">
+                {{#each products}}
+                    <section class="main__appearance__info__products__inner__product" data-uuid="{{id}}">
+                        <section class="main__appearance__info__products__inner__product__subitem">
+                            <div class="main__appearance__info__products__inner__product__subitem__image">
+                                <h1>Actual</h1>
+                                <img class="main__appearance__info__products__inner__product__subitem__image__img" src="{{image.url}}">
+                            </div>
+                            <aside class="main__appearance__info__products__inner__product__subitem__info">
+                                <h1 class="main__appearance__info__products__inner__product__subitem__info__h1">{{ name }}</h1>
+                                <h2 class="main__appearance__info__products__inner__product__subitem__info__h2">{{ brand.name }}</h2>
+                            </aside>
+                        </section>
+                        {{#each similars}}
+                            <section class="main__appearance__info__products__inner__product__subitem">
+                                <div class="main__appearance__info__products__inner__product__subitem__image">
+                                    <h1>{{ similar_type }}</h1>
+                                    <img class="main__appearance__info__products__inner__product__subitem__image__img" src="{{image.url}}">
+                                </div>
+                                <aside class="main__appearance__info__products__inner__product__subitem__info">
+                                    <h1 class="main__appearance__info__products__inner__product__subitem__info__h1">{{ name }}</h1>
+                                    <h2 class="main__appearance__info__products__inner__product__subitem__info__h2">{{ brand.name }}</h2>
+                                </aside>
+                            </section>
+                        {{/each}}
+                    </section>
+                {{/each}}
+            </section>
+        </section>
+    </section>
+</section>
