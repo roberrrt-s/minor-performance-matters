@@ -46,8 +46,13 @@ A progressive web application enables the user feeling for users that they're ex
 
 These applications enable users to create a button on their homescreen, and opening the website without any address section (which gives fullscreen a new meaning). In addition, you are able to send push notification to users, even when they are offline, and you're not restricted to the app store. Everyone is able to visit your web app
 
+Regarding the issue of responsive vs mobile website addressed by Jakob Nielson, this solution removes it, since it enables company's to build app like websites that serve as applications as well.
+
+And finally, updates! If you wish to patch an application, it involves a huge amount of time to pass it through the app store, and everyone should download this new app as well. a progressive web app doesn't have this issue.
+
 ### Sources
 * http://developer.telerik.com/featured/what-progressive-web-apps-mean-for-the-web/
 * https://addyosmani.com/blog/getting-started-with-progressive-web-apps/
 * https://developers.google.com/web/progressive-web-apps
 * https://arc.applause.com/2015/11/30/application-shell-architecture/
+* https://www.nngroup.com/articles/mobile-sites-vs-apps-strategy-shift/
